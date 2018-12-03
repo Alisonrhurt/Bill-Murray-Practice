@@ -1,0 +1,136 @@
+
+/*
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+*/
+
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 150px auto 40px;
+    grid-template-areas: 
+       "h h h h h h h h h h h ."
+       "c c c c c c c c c c c m"
+       "f f f f f f f f f f f .";
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffeead;
+}
+.container > div:nth-child(1n) {
+    background-color: #96ceb4;
+}
+.container > div:nth-child(3n) {
+    background-color: #88d8b0;
+}
+.container > div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+.container > div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+
+html, body {
+    box-sizing: border-box;
+    background-color: #ffeead;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+}
+
+.header {
+    grid-area: h;
+    font-size: 4em;
+}
+
+.menu {
+   grid-area: m;
+   font-size: 2em;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+}
+.menu a {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+}
+.menu a:hover {
+    color: black;
+}
+
+
+.content {
+   grid-area: c;
+   font-size: 2em;
+   /*padding: 20px;*/
+   padding-left: 40px;
+   padding-right: 40px;
+   text-align: center;
+   font-size: 25px;
+}
+.content a {
+    color: white;
+    text-decoration: none;
+}
+.content a:hover {
+    color: black;
+}
+.footer {
+    grid-area: f;
+    font-size: 1em;
+}
+
+.footer a {
+    text-decoration: none;
+    color:#ffeead;
+}
+.footer a:hover {
+    color: black;
+}
+
+
+/*
+.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .menu .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+*/
